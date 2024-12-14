@@ -455,6 +455,8 @@
         #scroll-top{
           display: none!important
         }
+
+        /* update css  */
     </style>
 
     {{-- header  --}}
