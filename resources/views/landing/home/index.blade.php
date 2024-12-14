@@ -339,6 +339,9 @@
             .sc-cat{
                 display: none
             }
+            .cat-prod{
+                font-size: 18px!important
+            }
         }
     </style>
     @include('pwa.layouts.partials.messages')
@@ -431,10 +434,10 @@
         <section id="services" class="services section">
 
             <!-- Section Title -->
-            <div class="container section-title sc-cat" data-aos="fade-up">
+            <div class="container section-title " data-aos="fade-up">
                 <center>
                     <h2>KATEGORI</h2>
-                    <div><span>Kategori Produk</span></div>
+                    <div><span class="cat-prod">Kategori Produk</span></div>
                 </center>
             </div><!-- End Section Title -->
 
