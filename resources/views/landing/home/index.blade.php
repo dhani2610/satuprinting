@@ -332,6 +332,14 @@
             }
 
         }
+        @media (max-width: 768px) {
+            .text-cat {
+                display: none
+            }
+            .sc-cat{
+                display: none
+            }
+        }
     </style>
     @include('pwa.layouts.partials.messages')
 
@@ -376,7 +384,7 @@
 
                 <div class="row gy-4">
 
-                    <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+                    <div class="col-lg-3 col-md-6 col-sm-3 d-flex flex-column align-items-center">
                         {{-- <i class="bi bi-emoji-smile"></i> --}}
                         <div class="stats-item" style="background: transparent">
                             <img src="{{ asset('assets-landing/img/home/HASIL.png') }}" class="img-fluid"
@@ -386,7 +394,7 @@
                         
                     </div><!-- End Stats Item -->
 
-                    <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+                    <div class="col-lg-3 col-md-6 col-sm-3 d-flex flex-column align-items-center">
                         {{-- <i class="bi bi-journal-richtext"></i> --}}
                         <div class="stats-item" style="background: transparent">
                             <img src="{{ asset('assets-landing/img/home/ONGKIR.png') }}" class="img-fluid"
@@ -395,7 +403,7 @@
                         </div>
                     </div><!-- End Stats Item -->
 
-                    <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+                    <div class="col-lg-3 col-md-6 col-sm-3 d-flex flex-column align-items-center">
                         {{-- <i class="bi bi-headset"></i> --}}
                         <div class="stats-item" style="background: transparent">
                             <img src="{{ asset('assets-landing/img/home/LAYANAN.png') }}" class="img-fluid"
@@ -404,7 +412,7 @@
                         </div>
                     </div><!-- End Stats Item -->
 
-                    <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+                    <div class="col-lg-3 col-md-6 col-sm-3 d-flex flex-column align-items-center">
                         {{-- <i class="bi bi-people"></i> --}}
                         <div class="stats-item" style="background: transparent">
                             <img src="{{ asset('assets-landing/img/home/ONLINE.png') }}" class="img-fluid"
@@ -423,7 +431,7 @@
         <section id="services" class="services section">
 
             <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
+            <div class="container section-title sc-cat" data-aos="fade-up">
                 <center>
                     <h2>KATEGORI</h2>
                     <div><span>Kategori Produk</span></div>
@@ -432,7 +440,7 @@
 
             <div class="container">
 
-                <div class="row gy-4">
+                {{-- <div class="row gy-4">
 
                     @foreach ($category as $cat)
                         <div class="col-lg-3 col-md-2" data-aos="fade-up" data-aos-delay="100">
@@ -463,7 +471,34 @@
                         </div>
                     </div><!-- End Service Item -->
 
+                </div> --}}
+
+                <div class="row gy-4">
+                    @foreach ($category as $cat)
+                        <div class="col-lg-3 col-md-2 col-3" data-aos="fade-up" data-aos-delay="100">
+                            <div class="service-item position-relative">
+                                <img src="{{ asset('assets/img/category/' . $cat->image) }}" class="img-fluid img-cat" style="max-width: 50%" alt="">
+                                <a href="{{ route('category-landing') }}?category={{ $cat->id }}" class="stretched-link" style="color: black">
+                                    <p class="fs-6 fs-md-5 fs-lg-4 text-cat">
+                                        <strong>{{ $cat->category }}</strong>
+                                    </p>
+                                </a>
+                            </div>
+                        </div><!-- End Service Item -->
+                    @endforeach
+                
+                    <div class="col-lg-3 col-md-2 col-3" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-item position-relative">
+                            <img src="{{ asset('assets-landing/img/home/LAIN LAIN.png') }}" class="img-fluid img-cat" style="max-width: 50%" alt="">
+                            <a href="{{ route('category-landing') }}?category=all" class="stretched-link" style="color: black">
+                                <p class="fs-6 fs-md-5 fs-lg-4 text-cat">
+                                    <strong>Lain Lain</strong>
+                                </p>
+                            </a>
+                        </div>
+                    </div><!-- End Service Item -->
                 </div>
+                
 
             </div>
 
