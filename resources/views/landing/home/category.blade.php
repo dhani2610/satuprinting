@@ -337,88 +337,6 @@
 
     <main class="main">
 
-        <!-- Hero Section -->
-        <section id="hero" class="hero section dark-background">
-
-            <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
-
-                @foreach ($slider as $s)
-                    <div class="carousel-item {{ $loop->iteration == 1 ? 'active' : '' }}">
-                        <img src="{{ asset('assets/img/slider/' . $s->image) }}" alt="">
-                        <div class="carousel-container">
-                            <h2>{{ $s->title }}<br></h2>
-                            <p>{{ $s->description }}</p>
-                            <a href="#featured-services" class="btn-get-started">Get Started</a>
-                        </div>
-                    </div><!-- End Carousel Item -->
-                @endforeach
-
-                <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-                </a>
-
-                <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
-                    <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-                </a>
-
-                <ol class="carousel-indicators"></ol>
-
-            </div>
-
-        </section><!-- /Hero Section -->
-
-        <!-- About Section -->
-
-        <!-- Stats Section -->
-        <section id="stats" class="stats section" style="background: #FFBD7B;border-top:15px solid #F7941D ">
-
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-                <div class="row gy-4">
-
-                    <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-                        {{-- <i class="bi bi-emoji-smile"></i> --}}
-                        <div class="stats-item" style="background: transparent">
-                            <img src="{{ asset('assets-landing/img/home/HASIL.png') }}" class="img-fluid"
-                                style="max-width: 30%" alt="">
-                            <p><strong>PRODUK BERKUALITAS</strong></p>
-                        </div>
-                        
-                    </div><!-- End Stats Item -->
-
-                    <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-                        {{-- <i class="bi bi-journal-richtext"></i> --}}
-                        <div class="stats-item" style="background: transparent">
-                            <img src="{{ asset('assets-landing/img/home/ONGKIR.png') }}" class="img-fluid"
-                                style="max-width: 30%" alt="">
-                            <p><strong>FREE ONGKIR</strong></p>
-                        </div>
-                    </div><!-- End Stats Item -->
-
-                    <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-                        {{-- <i class="bi bi-headset"></i> --}}
-                        <div class="stats-item" style="background: transparent">
-                            <img src="{{ asset('assets-landing/img/home/LAYANAN.png') }}" class="img-fluid"
-                                style="max-width: 30%" alt="">
-                            <p><strong>PELAYANAN PRIMA</strong></p>
-                        </div>
-                    </div><!-- End Stats Item -->
-
-                    <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-                        {{-- <i class="bi bi-people"></i> --}}
-                        <div class="stats-item" style="background: transparent">
-                            <img src="{{ asset('assets-landing/img/home/ONLINE.png') }}" class="img-fluid"
-                                style="max-width: 30%" alt="">
-                            <p><strong>ONLINE SERVICE</strong></p>
-                        </div>
-                    </div><!-- End Stats Item -->
-
-                </div>
-
-            </div>
-
-        </section><!-- /Stats Section -->
-
         <!-- Services Section -->
         <section id="services" class="services section">
 
@@ -469,69 +387,13 @@
 
         </section><!-- /Services Section -->
 
-
-        <!-- Stats Section -->
-        <section id="stats" class="stats section" style="background: #FFBD7B;border-top:15px solid #F7941D ">
-
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-                <div class="row gy-4">
-                    {{-- <div class="col-lg-2">
-                        <img src="{{ asset('assets-landing/img/home/LAIN LAIN.png') }}" class="img-fluid">
-                    </div> --}}
-                        <div id="container">
-                            <div id="slider-container">
-                                <span onclick="slideRight()" class="btn"></span>
-                                <div id="slider">
-                                    @foreach ($allProductsDisc as $p)
-                                    @php
-    
-                                        $catProd = App\Models\CategoryDocument::where('id', $p->id_category)->first();
-    
-                                    @endphp
-                                    <div class="slide" style="margin: 10px">
-                                        {{-- <div class="col-md-3 col-sm-6"> --}}
-                                            <div class="product-grid" style="background: white">
-                                                <div class="product-image">
-                                                    <a href="{{ route('detail-prod', $p->id) }}" class="image">
-                                                        <img class="pic-1" src="{{ asset('assets/img/product/' . $p->image) }}">
-                                                        <img class="pic-2" src="{{ asset('assets/img/product/' . $p->image) }}">
-                                                    </a>
-                                                    {{-- <ul class="product-links">
-                                                        <li><a href="#" data-tip="Quick View">
-                                                                <i class="fa-solid fa-eye"></i>
-                                                            </a>
-                                                        </li>
-                                                    </ul> --}}
-                                                </div>
-                                                <div class="product-content" style="text-align: left">
-                                                    <h3 class="title"><a href="{{ route('detail-prod', $p->id) }}"
-                                                            style="color: #F7941D!important">{{ $p->service }}</a></h3>
-                                                    <div class="price">From @currency($p->price) </div>
-                                                    <a href="{{ route('detail-prod', $p->id) }}" class="add-cart">Lihat
-                                                        Detail</a>
-                                                </div>
-                                            </div>
-                                        {{-- </div> --}}
-                                    </div>
-                                @endforeach
-                                </div>
-                                <span onclick="slideLeft()" class="btn"></span>
-                            </div>
-                        </div>
-                </div>
-            </div>
-
-        </section><!-- /Stats Section -->
-
-
         <!-- Services Section -->
         <section id="services" class="services section">
 
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up" style="color: #F7941D!important">
                 <center>
-                    <div style="color: #F7941D!important">NEW <span>PRODUCS</span></div>
+                    <div style="color: #F7941D!important"> <span>PRODUCTS</span></div>
                 </center>
             </div><!-- End Section Title -->
 
@@ -541,6 +403,9 @@
 
                     <div class="container">
                         <div class="row">
+                            @if (count($allProducts) == 0)
+                                <span class="text-center text-danger">Tidak Ada Produk.</span>
+                            @else
                             @foreach ($allProducts as $p)
                                 @php
 
@@ -571,6 +436,7 @@
                                     </div>
                                 </div>
                             @endforeach
+                            @endif
 
                         </div>
                     </div>

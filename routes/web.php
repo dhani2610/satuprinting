@@ -20,8 +20,9 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', 'FrontendController@home')->name('index');
-Route::get('/detail/{id}', 'FrontendController@detail')->name('detail-prod');
+Route::get('/detail/{id}', 'FrontendController@detailProd')->name('detail-prod');
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/category', 'FrontendController@category')->name('category-landing');
 
 /**
  * Admin routes

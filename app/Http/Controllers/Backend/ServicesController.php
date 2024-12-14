@@ -48,6 +48,9 @@ class ServicesController extends Controller
             $data->content = $request->content;
             $data->id_category = $request->id_category;
             $data->price = $request->price;
+            $data->is_diskon = $request->is_diskon;
+            $data->shopee = $request->shopee;
+            $data->tokopedia = $request->tokopedia;
             if ($request->hasFile('image')) {
                 $image = $request->file('image');
                 $name = time() . '.' . $image->getClientOriginalExtension();
@@ -61,7 +64,7 @@ class ServicesController extends Controller
             return redirect()->back();
 
         } catch (\Throwable $th) {
-            session()->flash('failed', 'Data has failed created !!');
+            session()->flash('failed', $th->getMessage());
             return redirect()->back();
         }
     }
@@ -81,6 +84,9 @@ class ServicesController extends Controller
             $data->content = $request->content;
             $data->id_category = $request->id_category;
             $data->price = $request->price;
+            $data->is_diskon = $request->is_diskon;
+            $data->shopee = $request->shopee;
+            $data->tokopedia = $request->tokopedia;
             if ($request->hasFile('image')) {
                 $image = $request->file('image');
                 $name = time() . '.' . $image->getClientOriginalExtension();
@@ -95,7 +101,7 @@ class ServicesController extends Controller
             session()->flash('success', 'Data has been edited !!');
             return redirect()->back();
         } catch (\Throwable $th) {
-            session()->flash('failed', 'Data has failed edited !!');
+            session()->flash('failed', $th->getMessage());
             return redirect()->back();
         }
     }

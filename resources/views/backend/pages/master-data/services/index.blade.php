@@ -72,6 +72,16 @@
                                                             name="price" placeholder="Enter Price" value="">
                                                     </div>
                                                     <div class="form-group col-md-12 col-sm-12 mb-3">
+                                                        <label for="name" class="mb-3">Shopee</label>
+                                                        <input type="text" class="form-control" id="shopee"
+                                                            name="shopee" placeholder="Enter Link Shopee" value="">
+                                                    </div>
+                                                    <div class="form-group col-md-12 col-sm-12 mb-3">
+                                                        <label for="name" class="mb-3">Tokopedia</label>
+                                                        <input type="text" class="form-control" id="tokopedia"
+                                                            name="tokopedia" placeholder="Enter Link Tokopedia" value="">
+                                                    </div>
+                                                    <div class="form-group col-md-12 col-sm-12 mb-3">
                                                         <label for="email" class="mb-3">DESCRIPTION SMALL</label>
                                                         <input type="text" class="form-control" id="description"
                                                             name="description" placeholder="Enter Description"
@@ -79,6 +89,13 @@
                                                     </div>
                                                     <div class="form-group col-md-12 col-sm-12 mb-3">
                                                         <textarea name="content" required class="summernote" id="" cols="30" rows="10"></textarea>
+                                                    </div>
+                                                    <div class="mb-4">
+                                                        <label class="form-label" for="status">Diskon?</label>
+                                                        <select id="status" name="status" class="form-select">
+                                                            <option value="1">Ya</option>
+                                                            <option value="0">Tidak</option>
+                                                        </select>
                                                     </div>
                                                     <div class="mb-4">
                                                         <label class="form-label" for="status">Status</label>
@@ -118,8 +135,11 @@
                                         <th>Product</th>
                                         <th>Description</th>
                                         <th>Price</th>
-                                        <th>Created Date</th>
+                                        <th>Diskon</th>
                                         <th>status</th>
+                                        <th>Shopee</th>
+                                        <th>Tokopedia</th>
+                                        <th>Created Date</th>
                                         <th class="no-print">Action</th>
                                     </tr>
                                 </thead>
@@ -147,7 +167,6 @@
                                             <td>{{ $service->service }}</td>
                                             <td>{{ $service->description }}</td>
                                             <td>@currency($service->price)</td>
-                                            <td>{{ $service->created_at }}</td>
                                             <td>
                                                 @if ($service->status == 1)
                                                     <span class="badge bg-label-success">Active</span>
@@ -155,6 +174,21 @@
                                                     <span class="badge bg-label-secondary">Inactive</span>
                                                 @endif
                                             </td>
+                                            <td>
+                                                @if ($service->is_diskon == 1)
+                                                    <span class="badge bg-label-success">Ya</span>
+                                                @else
+                                                    <span class="badge bg-label-secondary">Tidak</span>
+                                                @endif
+                                            </td>
+                                            <td>
+                                                <a href="{{ $service->shopee }}">Shopee</a>
+                                            </td>
+                                            <td>
+                                                <a href="{{ $service->shopee }}">Tokopedia</a>
+                                            </td>
+                                            <td>{{ $service->created_at }}</td>
+
                                             <td>
                                                 <div class="d-inline-block text-nowrap">
                                                     @if (Auth::guard('admin')->user()->can('services.edit'))
@@ -214,6 +248,16 @@
                                                                                 <input type="text" class="form-control" id="price"
                                                                                     name="price" placeholder="Enter Price" value="{{ $service->price }}">
                                                                             </div>
+                                                                            <div class="form-group col-md-12 col-sm-12 mb-3">
+                                                                                <label for="name" class="mb-3">Shopee</label>
+                                                                                <input type="text" class="form-control" id="shopee"
+                                                                                    value="{{ $service->shopee }}" name="shopee" placeholder="Enter Link Shopee" value="">
+                                                                            </div>
+                                                                            <div class="form-group col-md-12 col-sm-12 mb-3">
+                                                                                <label for="name" class="mb-3">Tokopedia</label>
+                                                                                <input type="text" class="form-control" id="tokopedia"
+                                                                                    value="{{ $service->tokopedia }}" name="tokopedia" placeholder="Enter Link Tokopedia" value="">
+                                                                            </div>
                                                                             <div
                                                                                 class="form-group col-md-12 col-sm-12 mb-3">
                                                                                 <label for="email"
@@ -230,6 +274,19 @@
                                                                             </div>
                                                                             <div class="form-group col-md-12 col-sm-12 mb-3">
                                                                                 <label class="form-label"
+                                                                                    for="status">Diskon ?</label>
+                                                                                <select id="is_diskon" name="is_diskon"
+                                                                                    class="form-select">
+                                                                                    <option value="1"
+                                                                                        {{ $service->status == '1' ? 'selected' : '' }}>
+                                                                                        Ya</option>
+                                                                                    <option value="0"
+                                                                                        {{ $service->status == '0' ? 'selected' : '' }}>
+                                                                                        Tidak</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="form-group col-md-12 col-sm-12 mb-3">
+                                                                                <label class="form-label"
                                                                                     for="status">Status</label>
                                                                                 <select id="status" name="status"
                                                                                     class="form-select">
@@ -241,6 +298,7 @@
                                                                                         Inactive</option>
                                                                                 </select>
                                                                             </div>
+                                                                            
                                                                         </div>
 
 
