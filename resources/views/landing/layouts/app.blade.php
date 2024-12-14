@@ -455,6 +455,20 @@
         #scroll-top{
           display: none!important
         }
+        .hero .carousel-item:before {
+        content: "";
+        background: none!important;
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+      }
+
+      .hero .carousel-item::before {
+        content: "";
+        background-color: none!important;
+        position: absolute;
+        inset: 0;
+      }
 
         /* update css  */
     </style>

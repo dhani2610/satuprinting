@@ -348,7 +348,7 @@
                         <div class="carousel-container">
                             <h2>{{ $s->title }}<br></h2>
                             <p>{{ $s->description }}</p>
-                            <a href="#featured-services" class="btn-get-started">Get Started</a>
+                            <a href="#services" class="btn-get-started">Kunjungi</a>
                         </div>
                     </div><!-- End Carousel Item -->
                 @endforeach
