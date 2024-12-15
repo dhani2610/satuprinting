@@ -362,7 +362,7 @@
                 <div class="row gy-4">
                     @foreach ($category as $cat)
                         <div class="col-lg-3 col-md-2 col-3" data-aos="fade-up" data-aos-delay="100">
-                            <div class="service-item position-relative">
+                            <div class="service-item position-relative" style="border:none">
                                 <img src="{{ asset('assets/img/category/' . $cat['image']) }}" class="img-fluid img-cat"
                                     style="max-width: 50%" alt="">
                                 <a href="{{ route('category-landing') }}?category={{ $cat['id'] }}"
@@ -376,7 +376,7 @@
                     @endforeach
 
                     <div class="col-lg-3 col-md-2 col-3" data-aos="fade-up" data-aos-delay="100">
-                        <div class="service-item position-relative">
+                        <div class="service-item position-relative" style="border:none">
                             <img src="{{ asset('assets-landing/img/home/LAIN LAIN.png') }}" class="img-fluid img-cat"
                                 style="max-width: 50%" alt="">
                             <a href="{{ route('category-landing') }}?category=all" class="stretched-link"

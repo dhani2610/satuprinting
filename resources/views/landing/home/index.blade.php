@@ -509,7 +509,7 @@ border-top:15px solid #F7941D ">
                 <div class="row gy-4">
                     @foreach ($category as $cat)
                         <div class="col-lg-3 col-md-2 col-3" data-aos="fade-up" data-aos-delay="100">
-                            <div class="service-item position-relative">
+                            <div class="service-item position-relative" style="border: none">
                                 <img src="{{ asset('assets/img/category/' . $cat['image']) }}" class="img-fluid img-cat"
                                     style="max-width: 50%" alt="">
                                 <a href="{{ route('category-landing') }}?category={{ $cat['id'] }}"
@@ -523,7 +523,7 @@ border-top:15px solid #F7941D ">
                     @endforeach
 
                     <div class="col-lg-3 col-md-2 col-3" data-aos="fade-up" data-aos-delay="100">
-                        <div class="service-item position-relative">
+                        <div class="service-item position-relative" style="border: none">
                             <img src="{{ asset('assets-landing/img/home/LAIN LAIN.png') }}" class="img-fluid img-cat"
                                 style="max-width: 50%" alt="">
                             <a href="{{ route('category-landing') }}?category=all" class="stretched-link"
@@ -631,7 +631,7 @@ border-top:15px solid #F7941D ">
                                 @php
                                     $catProd = App\Models\CategoryDocument::where('id', $p->id_category)->first();
                                 @endphp
-                                <div class="col-md-3 col-sm-6 product-item custom-col"
+                                <div class="col-md-3 col-sm-6 product-item "
                                     @if ($index >= 10) style="display: none;" @endif>
                                     <div class="product-grid">
                                         <div class="product-image">
@@ -655,11 +655,6 @@ border-top:15px solid #F7941D ">
                             @endforeach
                         </div>
 
-                        <div class="text-center mt-3">
-                            <button id="load-more-btn" class="btn btn-primary">Load More</button>
-                            <button id="load-less-btn" class="btn btn-secondary" style="display: none;">Load
-                                Less</button>
-                        </div>
                     </div>
 
 

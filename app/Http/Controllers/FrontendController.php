@@ -58,8 +58,8 @@ class FrontendController extends Controller
 
         $data['slider'] = Slider::whereNull('deleted_at')->where('status',1)->orderBy('created_at','desc')->get();
         $data['product'] = Services::whereNull('deleted_at')->where('status',1)->orderBy('created_at','desc')->limit(5)->get();
-        $data['allProducts'] = Services::whereNull('deleted_at')->where('status',1)->orderBy('created_at','desc')->get();
-        $data['allProductsDisc'] = Services::whereNull('deleted_at')->where('status',1)->where('is_diskon',1)->orderBy('created_at','desc')->get();
+        $data['allProducts'] = Services::whereNull('deleted_at')->where('status',1)->orderBy('created_at','desc')->limit(8)->get();
+        $data['allProductsDisc'] = Services::whereNull('deleted_at')->where('status',1)->where('is_diskon',1)->orderBy('created_at','desc')->limit(8)->get();
         return view('landing.home.index',$data);
     }
 
