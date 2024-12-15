@@ -334,7 +334,7 @@
         }
         @media (max-width: 768px) {
             .text-cat {
-                display: none
+                font-size: 8px!important;
             }
             .cat-prod{
                 font-size: 18px!important

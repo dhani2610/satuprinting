@@ -375,7 +375,7 @@
 
         @media (max-width: 768px) {
             .text-cat {
-                display: none
+                font-size: 8px!important;
             }
 
             .sc-cat {
