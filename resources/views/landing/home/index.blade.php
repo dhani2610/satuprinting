@@ -288,21 +288,21 @@
         }
 
         /* .card-image {
-            position: relative;
-            height: 150px;
-            width: 150px;
-            border-radius: 50%;
-            background: #FFF;
-            padding: 3px;
-        }
+                position: relative;
+                height: 150px;
+                width: 150px;
+                border-radius: 50%;
+                background: #FFF;
+                padding: 3px;
+            }
 
-        .card-image .card-img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid #4070F4;
-        } */
+            .card-image .card-img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+                border: 4px solid #4070F4;
+            } */
 
         .name {
             font-size: 18px;
@@ -375,7 +375,7 @@
 
         @media (max-width: 768px) {
             .text-cat {
-                font-size: 8px!important;
+                font-size: 8px !important;
             }
 
             .sc-cat {
@@ -387,7 +387,8 @@
             }
         }
 
-        .swiper-button-next, .swiper-rtl .swiper-button-prev {
+        .swiper-button-next,
+        .swiper-rtl .swiper-button-prev {
             background: white;
             padding: 29px;
             left: auto;
@@ -396,7 +397,9 @@
             color: black;
             font-weight: bold;
         }
-        .swiper-button-prev, .swiper-rtl .swiper-button-next {
+
+        .swiper-button-prev,
+        .swiper-rtl .swiper-button-next {
             background: white;
             left: 10px;
             right: auto;
@@ -404,12 +407,30 @@
             border-radius: 50%;
             font-weight: 900;
         }
-        .hero .carousel-control-next-icon, .hero .carousel-control-prev-icon {
+
+        .hero .carousel-control-next-icon,
+        .hero .carousel-control-prev-icon {
             background: #F7971E !important;
             font-size: 32px;
             line-height: 1;
             color: white;
-            z-index: 9999999!important
+            z-index: 9999999 !important
+        }
+
+        .hero .carousel-control-prev,
+        .hero .carousel-control-next {
+            width: 10%;
+            transition: 0.3s;
+            opacity: 2.5;
+            z-index: 999999999999999!important;
+        }
+        @media (max-width: 768px) {
+            .carousel-item img {
+                object-fit: contain; /* Menjaga agar seluruh gambar terlihat tanpa terpotong */
+            }
+            .hero .carousel {
+                min-height: 13vh!important;
+            }
         }
     </style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
@@ -445,7 +466,8 @@
         <!-- About Section -->
 
         <!-- Stats Section -->
-        <section id="stats" class="stats section" style="background: linear-gradient(to bottom, #FCE15A, #F7971E);
+        <section id="stats" class="stats section"
+            style="background: linear-gradient(to bottom, #FCE15A, #F7971E);
             border-top:15px solid #F7941D ">
 
             <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -513,16 +535,16 @@
                             <div class="service-item position-relative" style="border: none">
                                 <img src="{{ asset('assets/img/category/' . $cat['image']) }}" class="img-fluid img-cat"
                                     style="max-width: 50%" alt="">
-                                    @if ($cat['category'] == 'Pasang Stiker')
-                                    <a href="https://wrappingtroops.com" target="_blank"
-                                        class="stretched-link" style="color: black">
+                                @if ($cat['category'] == 'Pasang Stiker')
+                                    <a href="https://wrappingtroops.com" target="_blank" class="stretched-link"
+                                        style="color: black">
                                     @else
-                                    <a href="{{ route('category-landing') }}?category={{ $cat['id'] }}"
-                                        class="stretched-link" style="color: black">
-                                    @endif
-                                    <p class="fs-6 fs-md-5 fs-lg-4 text-cat">
-                                        <strong>{{ $cat['category'] }}</strong>
-                                    </p>
+                                        <a href="{{ route('category-landing') }}?category={{ $cat['id'] }}"
+                                            class="stretched-link" style="color: black">
+                                @endif
+                                <p class="fs-6 fs-md-5 fs-lg-4 text-cat">
+                                    <strong>{{ $cat['category'] }}</strong>
+                                </p>
                                 </a>
                             </div>
                         </div><!-- End Service Item -->
@@ -545,7 +567,7 @@
                         <img src="{{ asset('assets-landing/img/home/LAIN LAIN.png') }}" class="img-fluid">
                     </div> --}}
                     <div id="container">
-                      
+
                         <div class="row">
                             <div class="col-lg-3">
                                 <h5 style="color: bronze">
@@ -562,35 +584,41 @@
                                     <div class="slide-content">
                                         <div class="card-wrapper swiper-wrapper">
                                             @foreach ($allProductsDisc as $p)
-                                            @php
-            
-                                                $catProd = App\Models\CategoryDocument::where('id', $p->id_category)->first();
-            
-                                            @endphp
-                                            <div class="card swiper-slide" style="">
-                                                <div class="product-grid">
-                                                    <div class="product-image">
-                                                        <a href="{{ route('detail-prod', $p->id) }}" class="image">
-                                                            <img class="pic-1" src="{{ asset('assets/img/product/' . $p->image) }}">
-                                                            <img class="pic-2" src="{{ asset('assets/img/product/' . $p->image) }}">
-                                                        </a>
-                                                    </div>
-                                                    <div class="product-content">
-                                                        <h3 class="title">
-                                                            <a href="#"
-                                                                style="color: #F7941D!important">{{ $p->service }}</a>
-                                                        </h3>
-                                                        <div class="price">From @currency($p->price)</div>
-                                                        <a href="{{ route('detail-prod', $p->id) }}" class="add-cart">
-                                                           Lihat Detail
-                                                        </a>
+                                                @php
+
+                                                    $catProd = App\Models\CategoryDocument::where(
+                                                        'id',
+                                                        $p->id_category,
+                                                    )->first();
+
+                                                @endphp
+                                                <div class="card swiper-slide" style="">
+                                                    <div class="product-grid">
+                                                        <div class="product-image">
+                                                            <a href="{{ route('detail-prod', $p->id) }}" class="image">
+                                                                <img class="pic-1"
+                                                                    src="{{ asset('assets/img/product/' . $p->image) }}">
+                                                                <img class="pic-2"
+                                                                    src="{{ asset('assets/img/product/' . $p->image) }}">
+                                                            </a>
+                                                        </div>
+                                                        <div class="product-content">
+                                                            <h3 class="title">
+                                                                <a href="#"
+                                                                    style="color: #F7941D!important">{{ $p->service }}</a>
+                                                            </h3>
+                                                            <div class="price">From @currency($p->price)</div>
+                                                            <a href="{{ route('detail-prod', $p->id) }}"
+                                                                class="add-cart">
+                                                                Lihat Detail
+                                                            </a>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
                                             @endforeach
                                         </div>
                                     </div>
-        
+
                                     <div class="swiper-button-next swiper-navBtn"></div>
                                     <div class="swiper-button-prev swiper-navBtn"></div>
                                     <div class="swiper-pagination"></div>

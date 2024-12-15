@@ -7,13 +7,19 @@
         color: black;
         padding: 0px !important;
         font-family: var(--nav-font);
-        font-size: 17px;
+        font-size: 18px!important;
         font-weight: 500;
         display: flex;
         align-items: center;
         justify-content: space-between;
         white-space: nowrap;
         transition: 0.3s;
+        background: none!important
+    }
+
+    .bi::before, [class^="bi-"]::before, [class*=" bi-"]::before {
+      display: inline-block;
+      font-size: 17px!important;
     }
 }
 
@@ -24,13 +30,14 @@
         color: black;
         padding: 0px !important;
         font-family: var(--nav-font);
-        font-size: 17px;
+        font-size: 18px!important;
         font-weight: 500;
         display: flex;
         align-items: center;
         justify-content: space-between;
         white-space: nowrap;
         transition: 0.3s;
+        background: none!important
     }
 }
 .header .logo img {
