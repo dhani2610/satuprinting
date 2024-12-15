@@ -413,16 +413,11 @@
         <!-- Hero Section -->
         <section id="hero" class="hero section dark-background">
 
-            <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+            <div id="hero-carousel" class="carousel slide " data-bs-ride="carousel" data-bs-interval="5000">
 
                 @foreach ($slider as $s)
                     <div class="carousel-item {{ $loop->iteration == 1 ? 'active' : '' }}">
                         <img src="{{ asset('assets/img/slider/' . $s->image) }}" alt="">
-                        {{-- <div class="carousel-container">
-                            <h2>{{ $s->title }}<br></h2>
-                            <p>{{ $s->description }}</p>
-                            <a href="#services" class="btn-get-started">Kunjungi</a>
-                        </div> --}}
                     </div><!-- End Carousel Item -->
                 @endforeach
 
