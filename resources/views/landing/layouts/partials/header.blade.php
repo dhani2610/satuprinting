@@ -49,7 +49,7 @@
               <a href="https://www.tiktok.com/@satu.printing?_t=8sEIq5opyTg&_r=1" target="_blank"><i style="font-size: 25px !important;" class="bi bi-tiktok"></i></a>
               <a href="#" target="_blank"><i style="font-size: 25px !important;" class="bi bi-facebook"></i></a>
               <a href="https://www.instagram.com/satuprinting.id?igsh=dmxlczlyamlyMWg1" target="_blank"><i style="font-size: 25px !important;" class="bi bi-instagram"></i></a>
-              <a href="#" target="_blank"><i style="font-size: 25px !important;" class="bi bi-youtube"></i></a>
+              <a href="https://youtube.com/@satuprintingindonesia?si=TFJI704YpKeVO_lc" target="_blank"><i style="font-size: 25px !important;" class="bi bi-youtube"></i></a>
           </div>
             <i class="mobile-nav-toggle d-xl-none bi bi-list d-none"></i>
         </nav>

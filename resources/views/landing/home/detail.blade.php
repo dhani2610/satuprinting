@@ -395,17 +395,19 @@
                             <div class="col-md-6">
                                 <div class="product-dtl">
                                     <div class="product-info">
-                                        <div class="product-name">{{ $prod->service }}</div>
+                                        <div class="product-name mt-2">{{ $prod->service }}</div>
                                         <br>
                                         <div class="product-name">Deskripsi :</div>
                                         <br>
                                     </div>
                                     <div class="row">
-                                        {!! $prod->content ?? 'No data.' !!}
+                                        <div class="container">
+                                            {!! $prod->content ?? 'No data.' !!}
+                                        </div>
                                     </div>
                                     <div class="product-count">
                                       
-                                        <a href="https://wa.me/6282210008380" target="_blank" class="round-black-btn btn-success">WhatsApp</a>
+                                        <a href="https://wa.me/6282210008380" target="_blank" class="round-black-btn btn-success"><i class="bi bi-whatsapp"></i> WhatsApp</a>
                                         <a href="{{ $prod->shopee }}" target="_blank" class="round-black-btn" style="background: #ed502e;color:white">Shopee</a>
                                         <a href="{{ $prod->tokopedia }}" target="_blank" class="round-black-btn btn-success">Tokopedia</a>
                                     </div>

@@ -37,16 +37,16 @@
             <div class="col-lg-4 col-md-12 footer-about">
                 <h4>PEMBAYARAN</h4>
                 <div class="row">
-                    <div class="col-lg-6">
-                        <img src="https://i.pinimg.com/564x/00/cb/4f/00cb4f7ad2d81f39afffe610fc1d07fd.jpg" alt="BCA" style="max-width: 200px;margin-top:10px">
-                        <img src="https://www.bankmandiri.co.id/documents/20143/44881086/ag-branding-logo-1.png/842d8cf8-b7fb-3014-9620-21f0f88d8377?t=1623309819034" alt="BCA" style="max-width: 200px;margin-top:10px">
-                        <img src="https://asset-2.tstatic.net/pontianak/foto/bank/images/logo-bank-danamon.jpg" alt="BCA" style="max-width: 200px;margin-top:10px">
-                        <img src="https://www.pikpng.com/pngl/m/489-4896877_bni-logo-png.png" alt="BCA" style="max-width: 200px;margin-top:10px">
+                    <div class="col-lg-6 col-6">
+                        <img src="https://i.pinimg.com/564x/00/cb/4f/00cb4f7ad2d81f39afffe610fc1d07fd.jpg" alt="BCA" style="max-width: 180px;margin-top:10px;margin-right:10px">
+                        <img src="https://www.bankmandiri.co.id/documents/20143/44881086/ag-branding-logo-1.png/842d8cf8-b7fb-3014-9620-21f0f88d8377?t=1623309819034" alt="BCA" style="max-width: 180px;margin-top:10px;margin-right:10px">
+                        <img src="https://asset-2.tstatic.net/pontianak/foto/bank/images/logo-bank-danamon.jpg" alt="BCA" style="max-width: 180px;margin-top:10px;margin-right:10px">
+                        <img src="https://www.pikpng.com/pngl/m/489-4896877_bni-logo-png.png" alt="BCA" style="max-width: 180px;margin-top:10px;margin-right:10px">
                     </div>
-                    <div class="col-lg-6">
-                        <img src="https://www.pngkey.com/png/detail/223-2237565_bank-permata-logo.png" alt="BCA" style="max-width: 200px;margin-top:10px">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_J4mZpplmtUUyKMJ0Lw-PXDs4_vRFIStUYmPnYKh2Wpg_HhV7WydLn9yKubARL8JvdsI&usqp=CAU" alt="BCA" style="max-width: 200px;margin-top:10px">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW8bQmSJ3Z5QrUJNjAQh498SVoH55DInkx-A&s" alt="BCA" style="max-width: 200px;margin-top:10px">
+                    <div class="col-lg-6 col-6">
+                        <img src="https://www.pngkey.com/png/detail/223-2237565_bank-permata-logo.png" alt="BCA" style="max-width: 180px;margin-top:10px;margin-right:10px">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_J4mZpplmtUUyKMJ0Lw-PXDs4_vRFIStUYmPnYKh2Wpg_HhV7WydLn9yKubARL8JvdsI&usqp=CAU" alt="BCA" style="max-width: 180px;margin-top:10px;margin-right:10px">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW8bQmSJ3Z5QrUJNjAQh498SVoH55DInkx-A&s" alt="BCA" style="max-width: 180px;margin-top:10px;margin-right:10px">
                     </div>
                 </div>
             </div>
