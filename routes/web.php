@@ -23,6 +23,7 @@ Route::get('/', 'FrontendController@home')->name('index');
 Route::get('/detail/{id}', 'FrontendController@detailProd')->name('detail-prod');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/category', 'FrontendController@category')->name('category-landing');
+Route::get('/generate-data', 'FrontendController@generate')->name('generate-data');
 
 /**
  * Admin routes

@@ -1,25 +1,34 @@
-
 @php
-$setting = \App\Models\Setting::first()
+    $setting = \App\Models\Setting::first();
 @endphp
 
 
 <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-      <a href="/" class="logo d-flex align-items-center me-auto">
-        <img src="{{ asset('assets/img/logo/' . $setting->logo) }}" style="">
-      </a>
+        <a href="/" class="logo d-flex align-items-center me-auto">
+            <img src="{{ asset('assets/img/logo/' . $setting->logo) }}" style="">
+        </a>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="/" class="active">Home</a></li>
-          <li><a href="{{ route('category-landing') }}">Category</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                {{-- <li><a href="/" class="active">Home</a></li> --}}
+                {{-- <li><a href="/" class="active"> --}}
+                        <div class="social-links d-flex">
+                            <a href=""><i style="font-size: 25px !important;" class="bi bi-whatsapp"></i></a>
+                            <a href=""><i style="font-size: 25px !important;" class="bi bi-tiktok"></i></a>
+                            <a href=""><i style="font-size: 25px !important;" class="bi bi-facebook"></i></a>
+                            <a href=""><i style="font-size: 25px !important;" class="bi bi-instagram"></i></a>
+                            <a href=""><i style="font-size: 25px !important;" class="bi bi-youtube"></i></a>
+                        </div>
+                    </a>
+                {{-- </li> --}}
+                {{-- <li><a href="{{ route('category-landing') }}">Category</a></li> --}}
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
 
-      <a class="btn-getstarted" href="https://wa.me/6282210008380">Contact</a>
+        {{-- <a class="btn-getstarted" href="https://wa.me/6282210008380">Contact</a> --}}
 
     </div>
-  </header>
+</header>

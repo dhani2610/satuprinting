@@ -230,182 +230,121 @@
             }
         }
 
-        .slide-container {
-            max-width: 1120px;
-            width: 100%;
-            padding: 40px 0;
+        /* SLIDER  */
+        #container {
+            /* height: 100vh; */
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+            /* background: teal; */
+            display: grid;
+            place-items: center
         }
 
-        .slide-content {
-            margin: 0 40px;
+        #slider-container {
+            height: auto;
+            width: 85vw;
+            max-width: 1400px;
+            /* background: #54d5e4; */
+            /* box-shadow: 5px 5px 8px gray inset; */
+            position: relative;
             overflow: hidden;
-            border-radius: 25px;
+            padding: 20px;
         }
 
-        .card {
-            border-radius: 25px;
-            /* background-color: #FFF; */
+        #slider-container .btn {
+            z-index: 100000;
+            position: absolute;
+            top: calc(50% - 30px);
+            height: 30px;
+            width: 30px;
+            border-left: 8px solid black;
+            border-top: 8px solid black;
         }
 
-        .image-content,
-        .card-content {
+        #slider-container .btn:hover {
+            transform: scale(1.2);
+        }
+
+        #slider-container .btn.inactive {
+            border-color: rgb(153, 121, 126)
+        }
+
+        #slider-container .btn:first-of-type {
+            transform: rotate(-45deg);
+            left: 10px
+        }
+
+        #slider-container .btn:last-of-type {
+            transform: rotate(135deg);
+            right: 10px;
+        }
+
+        #slider-container #slider {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 10px 14px;
-        }
-
-        .image-content {
-            position: relative;
-            row-gap: 5px;
-            padding: 25px 0;
-        }
-
-        .overlay {
-            position: absolute;
-            left: 0;
-            top: 0;
+            width: 1000%;
             height: 100%;
-            width: 100%;
-            background-color: #4070F4;
-            border-radius: 25px 25px 0 25px;
+            transition: all .5s;
         }
 
-        .overlay::before,
-        .overlay::after {
-            content: '';
-            position: absolute;
-            right: 0;
-            bottom: -40px;
-            height: 40px;
-            width: 40px;
-            background-color: #4070F4;
+        #slider-container #slider .slide {
+            height: 90%;
+            /* margin: auto 10px; */
+            /* background-color: #a847a4; */
+            /* box-shadow: 2px 2px 4px 2px white, -2px -2px 4px 2px white; */
+            display: grid;
+            place-items: center;
         }
 
-        .overlay::after {
-            border-radius: 0 25px 0 0;
-            background-color: #FFF;
+        #slider-container #slider .slide span {
+            color: white;
+            font-size: 150px;
         }
 
-        /* .card-image {
-            position: relative;
-            height: 150px;
-            width: 150px;
-            border-radius: 50%;
-            background: #FFF;
-            padding: 3px;
-        }
+        @media only screen and (min-width: 1100px) {
 
-        .card-image .card-img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid #4070F4;
-        } */
-
-        .name {
-            font-size: 18px;
-            font-weight: 500;
-            color: #333;
-        }
-
-        .description {
-            font-size: 14px;
-            color: #707070;
-            text-align: center;
-        }
-
-        .button {
-            border: none;
-            font-size: 16px;
-            color: #FFF;
-            padding: 8px 16px;
-            background-color: #4070F4;
-            border-radius: 6px;
-            margin: 14px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .button:hover {
-            background: #265DF2;
-        }
-
-        .swiper-navBtn {
-            color: #6E93f7;
-            transition: color 0.3s ease;
-        }
-
-        .swiper-navBtn:hover {
-            color: #4070F4;
-        }
-
-        .swiper-navBtn::before,
-        .swiper-navBtn::after {
-            font-size: 35px;
-        }
-
-        .swiper-button-next {
-            right: 0;
-        }
-
-        .swiper-button-prev {
-            left: 0;
-        }
-
-        .swiper-pagination-bullet {
-            background-color: #6E93f7;
-            opacity: 1;
-        }
-
-        .swiper-pagination-bullet-active {
-            background-color: #4070F4;
-        }
-
-        @media screen and (max-width: 768px) {
-            .slide-content {
-                margin: 0 10px;
+            #slider-container #slider .slide {
+                width: calc(2.5% - 20px);
             }
 
-            .swiper-navBtn {
-                display: none;
-            }
         }
 
+        @media only screen and (max-width: 1100px) {
+
+            #slider-container #slider .slide {
+                width: calc(3.3333333% - 20px);
+            }
+
+        }
+
+        @media only screen and (max-width: 900px) {
+
+            #slider-container #slider .slide {
+                width: calc(5% - 20px);
+            }
+
+        }
+
+        @media only screen and (max-width: 550px) {
+
+            #slider-container #slider .slide {
+                width: calc(10% - 20px);
+            }
+
+        }
         @media (max-width: 768px) {
             .text-cat {
                 display: none
             }
-
-            .sc-cat {
+            .sc-cat{
                 display: none
             }
-
-            .cat-prod {
-                font-size: 18px !important
+            .cat-prod{
+                font-size: 18px!important
             }
         }
-
-        .swiper-button-next, .swiper-rtl .swiper-button-prev {
-            background: white;
-            padding: 29px;
-            left: auto;
-            border-radius: 50%;
-            font-size: 10px;
-            color: black;
-            font-weight: bold;
-        }
-        .swiper-button-prev, .swiper-rtl .swiper-button-next {
-            background: white;
-            left: 10px;
-            right: auto;
-            padding: 29px;
-            border-radius: 50%;
-            font-weight: 900;
-        }
     </style>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
     @include('pwa.layouts.partials.messages')
 
     <main class="main">
@@ -443,8 +382,7 @@
         <!-- About Section -->
 
         <!-- Stats Section -->
-        <section id="stats" class="stats section" style="background: linear-gradient(to bottom, #FCE15A, #F7971E);
-border-top:15px solid #F7941D ">
+        <section id="stats" class="stats section" style="background: #FFBD7B;border-top:15px solid #F7941D ">
 
             <div class="container" data-aos="fade-up" data-aos-delay="100">
 
@@ -457,7 +395,7 @@ border-top:15px solid #F7941D ">
                                 style="max-width: 30%" alt="">
                             <p><strong>PRODUK BERKUALITAS</strong></p>
                         </div>
-
+                        
                     </div><!-- End Stats Item -->
 
                     <div class="col-lg-3 col-md-6 col-sm-3 d-flex flex-column align-items-center">
@@ -510,10 +448,8 @@ border-top:15px solid #F7941D ">
                     @foreach ($category as $cat)
                         <div class="col-lg-3 col-md-2 col-3" data-aos="fade-up" data-aos-delay="100">
                             <div class="service-item position-relative">
-                                <img src="{{ asset('assets/img/category/' . $cat['image']) }}" class="img-fluid img-cat"
-                                    style="max-width: 50%" alt="">
-                                <a href="{{ route('category-landing') }}?category={{ $cat['id'] }}"
-                                    class="stretched-link" style="color: black">
+                                <img src="{{ asset('assets/img/category/' . $cat['image']) }}" class="img-fluid img-cat" style="max-width: 50%" alt="">
+                                <a href="{{ route('category-landing') }}?category={{ $cat['id'] }}" class="stretched-link" style="color: black">
                                     <p class="fs-6 fs-md-5 fs-lg-4 text-cat">
                                         <strong>{{ $cat['category'] }}</strong>
                                     </p>
@@ -521,13 +457,11 @@ border-top:15px solid #F7941D ">
                             </div>
                         </div><!-- End Service Item -->
                     @endforeach
-
+                
                     <div class="col-lg-3 col-md-2 col-3" data-aos="fade-up" data-aos-delay="100">
                         <div class="service-item position-relative">
-                            <img src="{{ asset('assets-landing/img/home/LAIN LAIN.png') }}" class="img-fluid img-cat"
-                                style="max-width: 50%" alt="">
-                            <a href="{{ route('category-landing') }}?category=all" class="stretched-link"
-                                style="color: black">
+                            <img src="{{ asset('assets-landing/img/home/LAIN LAIN.png') }}" class="img-fluid img-cat" style="max-width: 50%" alt="">
+                            <a href="{{ route('category-landing') }}?category=all" class="stretched-link" style="color: black">
                                 <p class="fs-6 fs-md-5 fs-lg-4 text-cat">
                                     <strong>Lain Lain</strong>
                                 </p>
@@ -535,7 +469,7 @@ border-top:15px solid #F7941D ">
                         </div>
                     </div><!-- End Service Item -->
                 </div>
-
+                
 
             </div>
 
@@ -543,7 +477,7 @@ border-top:15px solid #F7941D ">
 
 
         <!-- Stats Section -->
-        <section id="stats" class="stats section" style="background: linear-gradient(to bottom, #FCE15A, #F7971E);">
+        <section id="stats" class="stats section" style="background: #FFBD7B;border-top:15px solid #F7941D ">
 
             <div class="container" data-aos="fade-up" data-aos-delay="100">
 
@@ -551,60 +485,46 @@ border-top:15px solid #F7941D ">
                     {{-- <div class="col-lg-2">
                         <img src="{{ asset('assets-landing/img/home/LAIN LAIN.png') }}" class="img-fluid">
                     </div> --}}
-                    <div id="container">
-                      
-                        <div class="row">
-                            <div class="col-lg-3">
-                                <h5 style="color: bronze">
-                                    <b>
-                                        Promo Bulan ini
-                                    </b>
-                                </h5>
-                                <p style="color: burlywood">Nikmati Promosinya</p>
-
-                                <img src="{{ asset('assets-landing/img/home/MERCHANDISE.png') }}" class="img-fluid">
-                            </div>
-                            <div class="col-lg-9">
-                                <div class="slide-container swiper">
-                                    <div class="slide-content">
-                                        <div class="card-wrapper swiper-wrapper">
-                                            @foreach ($allProductsDisc as $p)
-                                            @php
-            
-                                                $catProd = App\Models\CategoryDocument::where('id', $p->id_category)->first();
-            
-                                            @endphp
-                                            <div class="card swiper-slide" style="">
-                                                <div class="product-grid">
-                                                    <div class="product-image">
-                                                        <a href="{{ route('detail-prod', $p->id) }}" class="image">
-                                                            <img class="pic-1" src="{{ asset('assets/img/product/' . $p->image) }}">
-                                                            <img class="pic-2" src="{{ asset('assets/img/product/' . $p->image) }}">
-                                                        </a>
-                                                    </div>
-                                                    <div class="product-content">
-                                                        <h3 class="title">
-                                                            <a href="#"
-                                                                style="color: #F7941D!important">{{ $p->service }}</a>
-                                                        </h3>
-                                                        <div class="price">From @currency($p->price)</div>
-                                                        <a href="{{ route('detail-prod', $p->id) }}" class="add-cart">
-                                                           Lihat Detail
-                                                        </a>
-                                                    </div>
+                        <div id="container">
+                            <div id="slider-container">
+                                <span onclick="slideRight()" class="btn"></span>
+                                <div id="slider">
+                                    @foreach ($allProductsDisc as $p)
+                                    @php
+    
+                                        $catProd = App\Models\CategoryDocument::where('id', $p->id_category)->first();
+    
+                                    @endphp
+                                    <div class="slide" style="margin: 10px">
+                                        {{-- <div class="col-md-3 col-sm-6"> --}}
+                                            <div class="product-grid" style="background: white">
+                                                <div class="product-image">
+                                                    <a href="{{ route('detail-prod', $p->id) }}" class="image">
+                                                        <img class="pic-1" src="{{ asset('assets/img/product/' . $p->image) }}">
+                                                        <img class="pic-2" src="{{ asset('assets/img/product/' . $p->image) }}">
+                                                    </a>
+                                                    {{-- <ul class="product-links">
+                                                        <li><a href="#" data-tip="Quick View">
+                                                                <i class="fa-solid fa-eye"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul> --}}
+                                                </div>
+                                                <div class="product-content" style="text-align: left">
+                                                    <h3 class="title"><a href="{{ route('detail-prod', $p->id) }}"
+                                                            style="color: #F7941D!important">{{ $p->service }}</a></h3>
+                                                    <div class="price">From @currency($p->price) </div>
+                                                    <a href="{{ route('detail-prod', $p->id) }}" class="add-cart">Lihat
+                                                        Detail</a>
                                                 </div>
                                             </div>
-                                            @endforeach
-                                        </div>
+                                        {{-- </div> --}}
                                     </div>
-        
-                                    <div class="swiper-button-next swiper-navBtn"></div>
-                                    <div class="swiper-button-prev swiper-navBtn"></div>
-                                    <div class="swiper-pagination"></div>
+                                @endforeach
                                 </div>
+                                <span onclick="slideLeft()" class="btn"></span>
                             </div>
                         </div>
-                    </div>
                 </div>
             </div>
 
@@ -631,8 +551,7 @@ border-top:15px solid #F7941D ">
                                 @php
                                     $catProd = App\Models\CategoryDocument::where('id', $p->id_category)->first();
                                 @endphp
-                                <div class="col-md-3 col-sm-6 product-item"
-                                    @if ($index >= 8) style="display: none;" @endif>
+                                <div class="col-md-3 col-sm-6 product-item" @if ($index >= 8) style="display: none;" @endif>
                                     <div class="product-grid">
                                         <div class="product-image">
                                             <a href="{{ route('detail-prod', $p->id) }}" class="image">
@@ -642,8 +561,7 @@ border-top:15px solid #F7941D ">
                                         </div>
                                         <div class="product-content">
                                             <h3 class="title">
-                                                <a href="#"
-                                                    style="color: #F7941D!important">{{ $p->service }}</a>
+                                                <a href="#" style="color: #F7941D!important">{{ $p->service }}</a>
                                             </h3>
                                             <div class="price">From @currency($p->price)</div>
                                             <a href="{{ route('detail-prod', $p->id) }}" class="add-cart">
@@ -654,14 +572,13 @@ border-top:15px solid #F7941D ">
                                 </div>
                             @endforeach
                         </div>
-
+                    
                         <div class="text-center mt-3">
                             <button id="load-more-btn" class="btn btn-primary">Load More</button>
-                            <button id="load-less-btn" class="btn btn-secondary" style="display: none;">Load
-                                Less</button>
+                            <button id="load-less-btn" class="btn btn-secondary" style="display: none;">Load Less</button>
                         </div>
                     </div>
-
+                    
 
                 </div>
 
@@ -673,72 +590,123 @@ border-top:15px solid #F7941D ">
 
     </main>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const loadMoreBtn = document.getElementById('load-more-btn');
             const loadLessBtn = document.getElementById('load-less-btn');
             const products = document.querySelectorAll('.product-item');
             let itemsToShow = 8; // Jumlah awal item yang ditampilkan
-
-            loadMoreBtn.addEventListener('click', function() {
+    
+            loadMoreBtn.addEventListener('click', function () {
                 itemsToShow += 8;
                 products.forEach((product, index) => {
                     if (index < itemsToShow) {
                         product.style.display = 'block';
                     }
                 });
-
+    
                 if (itemsToShow >= products.length) {
                     loadMoreBtn.style.display = 'none';
                     loadLessBtn.style.display = 'inline-block';
                 }
             });
-
-            loadLessBtn.addEventListener('click', function() {
+    
+            loadLessBtn.addEventListener('click', function () {
                 itemsToShow = 8;
                 products.forEach((product, index) => {
                     if (index >= itemsToShow) {
                         product.style.display = 'none';
                     }
                 });
-
+    
                 loadMoreBtn.style.display = 'inline-block';
                 loadLessBtn.style.display = 'none';
             });
         });
     </script>
-    <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.js"></script>
-    <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/script.js"></script>
-
+    
     <script>
-        var swiper = new Swiper(".slide-content", {
-            slidesPerView: 3,
-            spaceBetween: 25,
-            loop: true,
-            centerSlide: 'true',
-            fade: 'true',
-            grabCursor: 'true',
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-                dynamicBullets: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
+        
+        var container = document.getElementById('container')
+        var slider = document.getElementById('slider');
+        var slides = document.getElementsByClassName('slide').length;
+        var buttons = document.getElementsByClassName('btn');
 
-            breakpoints: {
-                0: {
-                    slidesPerView: 1,
-                },
-                520: {
-                    slidesPerView: 2,
-                },
-                950: {
-                    slidesPerView: 3,
-                },
-            },
-        });
+
+        var currentPosition = 0;
+        var currentMargin = 0;
+        var slidesPerPage = 0;
+        var slidesCount = slides - slidesPerPage;
+        var containerWidth = container.offsetWidth;
+        var prevKeyActive = false;
+        var nextKeyActive = true;
+
+        window.addEventListener("resize", checkWidth);
+
+        function checkWidth() {
+            containerWidth = container.offsetWidth;
+            setParams(containerWidth);
+        }
+
+        function setParams(w) {
+            if (w < 551) {
+                slidesPerPage = 1;
+            } else {
+                if (w < 901) {
+                    slidesPerPage = 2;
+                } else {
+                    if (w < 1101) {
+                        slidesPerPage = 3;
+                    } else {
+                        slidesPerPage = 4;
+                    }
+                }
+            }
+            slidesCount = slides - slidesPerPage;
+            if (currentPosition > slidesCount) {
+                currentPosition -= slidesPerPage;
+            };
+            currentMargin = -currentPosition * (100 / slidesPerPage);
+            slider.style.marginLeft = currentMargin + '%';
+            if (currentPosition > 0) {
+                buttons[0].classList.remove('inactive');
+            }
+            if (currentPosition < slidesCount) {
+                buttons[1].classList.remove('inactive');
+            }
+            if (currentPosition >= slidesCount) {
+                buttons[1].classList.add('inactive');
+            }
+        }
+
+        setParams();
+
+        function slideRight() {
+            if (currentPosition != 0) {
+                slider.style.marginLeft = currentMargin + (100 / slidesPerPage) + '%';
+                currentMargin += (100 / slidesPerPage);
+                currentPosition--;
+            };
+            if (currentPosition === 0) {
+                buttons[0].classList.add('inactive');
+            }
+            if (currentPosition < slidesCount) {
+                buttons[1].classList.remove('inactive');
+            }
+        };
+
+        function slideLeft() {
+            if (currentPosition != slidesCount) {
+                slider.style.marginLeft = currentMargin - (100 / slidesPerPage) + '%';
+                currentMargin -= (100 / slidesPerPage);
+                currentPosition++;
+            };
+            if (currentPosition == slidesCount) {
+                buttons[1].classList.add('inactive');
+            }
+            if (currentPosition > 0) {
+                buttons[0].classList.remove('inactive');
+            }
+        };
     </script>
 @endsection
 
