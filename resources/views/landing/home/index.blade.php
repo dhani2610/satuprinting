@@ -507,8 +507,13 @@
                             <div class="service-item position-relative" style="border: none">
                                 <img src="{{ asset('assets/img/category/' . $cat['image']) }}" class="img-fluid img-cat"
                                     style="max-width: 50%" alt="">
-                                <a href="{{ route('category-landing') }}?category={{ $cat['id'] }}"
-                                    class="stretched-link" style="color: black">
+                                    @if ($cat['category'] == 'Pasang Stiker')
+                                    <a href="https://wrappingtroops.com" target="_blank"
+                                        class="stretched-link" style="color: black">
+                                    @else
+                                    <a href="{{ route('category-landing') }}?category={{ $cat['id'] }}"
+                                        class="stretched-link" style="color: black">
+                                    @endif
                                     <p class="fs-6 fs-md-5 fs-lg-4 text-cat">
                                         <strong>{{ $cat['category'] }}</strong>
                                     </p>
@@ -516,19 +521,6 @@
                             </div>
                         </div><!-- End Service Item -->
                     @endforeach
-
-                    <div class="col-lg-3 col-md-2 col-3" data-aos="fade-up" data-aos-delay="100">
-                        <div class="service-item position-relative" style="border: none">
-                            <img src="{{ asset('assets-landing/img/home/LAIN LAIN.png') }}" class="img-fluid img-cat"
-                                style="max-width: 50%" alt="">
-                            <a href="{{ route('category-landing') }}?category=all" class="stretched-link"
-                                style="color: black">
-                                <p class="fs-6 fs-md-5 fs-lg-4 text-cat">
-                                    <strong>Lain Lain</strong>
-                                </p>
-                            </a>
-                        </div>
-                    </div><!-- End Service Item -->
                 </div>
 
 

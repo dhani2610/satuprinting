@@ -33,6 +33,10 @@
         transition: 0.3s;
     }
 }
+.header .logo img {
+    max-height: 45px!important;
+    margin-right: 8px;
+}
 </style>
 
 
@@ -40,7 +44,7 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
         <a href="/" class="logo d-flex align-items-center me-auto">
-            <img src="{{ asset('assets/img/logo/' . $setting->logo) }}" style="">
+            <img src="{{ asset('assets/img/logo/' . $setting->logo) }}" style="max-width:200px!important;">
         </a>
 
         <nav id="navmenu" class="navmenu">

@@ -509,6 +509,11 @@
             }
         }
 
+        .services .service-item:hover {
+            background: linear-gradient(to bottom, #FCE15A, #F7971E)!important;
+            border-color: var(--accent-color);
+        }
+
 
 
         /* update css  */

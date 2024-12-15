@@ -43,7 +43,8 @@ class FrontendController extends Controller
             "Signage",
             "Advertising",
             "Event Both",
-            "Pasang Stiker"
+            "Pasang Stiker",
+            "Lain Lain",
         ];
 
         // Ubah collection menjadi array untuk bisa diurutkan
@@ -238,6 +239,19 @@ class FrontendController extends Controller
     // }
 
     public function generate(){
+        
+        $randomPhotos = ['asdjsajdasnjnsajn.webp', '1727591493.jpeg', '1727591122.jpeg'];
+
+        for ($i = 0; $i < 10; $i++) {
+            Services::create([
+                'service' => '-',
+                'description' => '-',
+                'id_category' => 14,
+                'price' => 0,
+                'image' => $randomPhotos[array_rand($randomPhotos)],
+                'is_diskon' => 0, // Random availability (1 or 0)
+            ]);
+        }
         $allProducts = Services::whereNull('deleted_at')->where('status',1)->orderBy('created_at','desc')->get();
         foreach ($allProducts as $key => $value) {
             $pd = Services::find($value->id);
