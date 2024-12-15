@@ -444,7 +444,7 @@
 
         <!-- Stats Section -->
         <section id="stats" class="stats section" style="background: linear-gradient(to bottom, #FCE15A, #F7971E);
-border-top:15px solid #F7941D ">
+            border-top:15px solid #F7941D ">
 
             <div class="container" data-aos="fade-up" data-aos-delay="100">
 

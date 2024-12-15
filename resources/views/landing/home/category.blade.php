@@ -347,7 +347,7 @@
     <main class="main">
 
           <!-- Services Section -->
-          <section id="services" class="services section">
+        <section id="services" class="services section d-none">
 
             <!-- Section Title -->
             <div class="container section-title " data-aos="fade-up">
@@ -398,6 +398,7 @@
 
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up" style="color: #F7941D!important">
+                <a href="/" class="btn btn-danger" style="border-radius:15px" >Kembali</a>
                 <center>
                     <div style="color: #F7941D!important"> <span>PRODUCTS LIST</span></div>
                 </center>
