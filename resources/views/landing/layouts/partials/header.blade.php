@@ -1,6 +1,39 @@
 @php
     $setting = \App\Models\Setting::first();
 @endphp
+<style>
+@media (max-width: 768px) {
+    .navmenu a, .navmenu a:focus {
+        color: black;
+        padding: 0px !important;
+        font-family: var(--nav-font);
+        font-size: 17px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        white-space: nowrap;
+        transition: 0.3s;
+    }
+}
+
+
+
+@media (max-width: 1199px) {
+    .navmenu a, .navmenu a:focus {
+        color: black;
+        padding: 0px !important;
+        font-family: var(--nav-font);
+        font-size: 17px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        white-space: nowrap;
+        transition: 0.3s;
+    }
+}
+</style>
 
 
 <header id="header" class="header d-flex align-items-center sticky-top">
@@ -11,21 +44,14 @@
         </a>
 
         <nav id="navmenu" class="navmenu">
-            <ul>
-                {{-- <li><a href="/" class="active">Home</a></li> --}}
-                {{-- <li><a href="/" class="active"> --}}
-                        <div class="social-links d-flex">
-                            <a href=""><i style="font-size: 25px !important;" class="bi bi-whatsapp"></i></a>
-                            <a href=""><i style="font-size: 25px !important;" class="bi bi-tiktok"></i></a>
-                            <a href=""><i style="font-size: 25px !important;" class="bi bi-facebook"></i></a>
-                            <a href=""><i style="font-size: 25px !important;" class="bi bi-instagram"></i></a>
-                            <a href=""><i style="font-size: 25px !important;" class="bi bi-youtube"></i></a>
-                        </div>
-                    </a>
-                {{-- </li> --}}
-                {{-- <li><a href="{{ route('category-landing') }}">Category</a></li> --}}
-            </ul>
-            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            <div class="social-links d-flex responsive-social-links">
+              <a href="https://wa.me/6282210008380" target="_blank"><i style="font-size: 25px !important;" class="bi bi-whatsapp"></i></a>
+              <a href="https://www.tiktok.com/@satu.printing?_t=8sEIq5opyTg&_r=1" target="_blank"><i style="font-size: 25px !important;" class="bi bi-tiktok"></i></a>
+              <a href="#" target="_blank"><i style="font-size: 25px !important;" class="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com/satuprinting.id?igsh=dmxlczlyamlyMWg1" target="_blank"><i style="font-size: 25px !important;" class="bi bi-instagram"></i></a>
+              <a href="#" target="_blank"><i style="font-size: 25px !important;" class="bi bi-youtube"></i></a>
+          </div>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list d-none"></i>
         </nav>
 
         {{-- <a class="btn-getstarted" href="https://wa.me/6282210008380">Contact</a> --}}

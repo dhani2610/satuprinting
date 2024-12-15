@@ -17,11 +17,11 @@
                     </p>
 
                     <div class="social-links mt-4">
-                        <a href=""><i class="bi bi-whatsapp"></i>  0822 1000 8380</a> <br>
-                        <a href=""><i class="bi bi-instagram"></i>  @satuprinting.id</a> <br>
-                        <a href=""><i class="bi bi-tiktok"></i> satu.printing</a> <br>
-                        <a href=""><i class="bi bi-facebook"></i> Satu Printing Indonesia</a> <br>
-                        <a href=""><i class="bi bi-youtube"></i> Satu Printing Indonesia</a> <br>
+                        <a target="_blank" href="https://wa.me/6282210008380"><i class="bi bi-whatsapp"></i>  0822 1000 8380</a> <br>
+                        <a target="_blank" href="https://www.instagram.com/satuprinting.id?igsh=dmxlczlyamlyMWg1"><i class="bi bi-instagram"></i>  @satuprinting.id</a> <br>
+                        <a target="_blank" href="https://www.tiktok.com/@satu.printing?_t=8sEIq5opyTg&_r=1"><i class="bi bi-tiktok"></i> satu.printing</a> <br>
+                        <a target="_blank" href="#"><i class="bi bi-facebook"></i> Satu Printing Indonesia</a> <br>
+                        <a target="_blank" href="#"><i class="bi bi-youtube"></i> Satu Printing Indonesia</a> <br>
                       </div>
                 </div>
             </div>

@@ -406,7 +406,7 @@
         }
     </style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
-    @include('pwa.layouts.partials.messages')
+    @include('landing.layouts.partials.messages')
 
     <main class="main">
 
