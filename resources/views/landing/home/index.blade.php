@@ -409,6 +409,7 @@
             font-size: 32px;
             line-height: 1;
             color: white;
+            z-index: 9999999!important
         }
     </style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
@@ -607,9 +608,10 @@
         <section id="services" class="services section">
 
             <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up" style="color: #F7941D!important">
+            <div class="container section-title" data-aos="fade-up" style="">
                 <center>
-                    <div style="color: #F7941D!important">NEW <span>PRODUCTS</span></div>
+                    <div><span class="cat-prod">Produk Baru</span></div>
+
                 </center>
             </div><!-- End Section Title -->
 
