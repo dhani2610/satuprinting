@@ -631,8 +631,8 @@ border-top:15px solid #F7941D ">
                                 @php
                                     $catProd = App\Models\CategoryDocument::where('id', $p->id_category)->first();
                                 @endphp
-                                <div class="col-md-3 col-sm-6 product-item"
-                                    @if ($index >= 8) style="display: none;" @endif>
+                                <div class="col-md-3 col-sm-6 product-item custom-col"
+                                    @if ($index >= 10) style="display: none;" @endif>
                                     <div class="product-grid">
                                         <div class="product-image">
                                             <a href="{{ route('detail-prod', $p->id) }}" class="image">
@@ -680,7 +680,7 @@ border-top:15px solid #F7941D ">
             let itemsToShow = 8; // Jumlah awal item yang ditampilkan
 
             loadMoreBtn.addEventListener('click', function() {
-                itemsToShow += 8;
+                itemsToShow += 10;
                 products.forEach((product, index) => {
                     if (index < itemsToShow) {
                         product.style.display = 'block';
@@ -711,9 +711,9 @@ border-top:15px solid #F7941D ">
 
     <script>
         var swiper = new Swiper(".slide-content", {
-            slidesPerView: 3,
-            spaceBetween: 25,
-            loop: true,
+            slidesPerView: 4,
+            spaceBetween: 10,
+            loop: false,
             centerSlide: 'true',
             fade: 'true',
             grabCursor: 'true',
@@ -735,7 +735,7 @@ border-top:15px solid #F7941D ">
                     slidesPerView: 2,
                 },
                 950: {
-                    slidesPerView: 3,
+                    slidesPerView: 4,
                 },
             },
         });

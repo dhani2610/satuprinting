@@ -346,11 +346,11 @@
 
     <main class="main">
 
-         <!-- Services Section -->
-         <section id="services" class="services section">
+          <!-- Services Section -->
+          <section id="services" class="services section">
 
             <!-- Section Title -->
-            <div class="container section-title sc-cat" data-aos="fade-up">
+            <div class="container section-title " data-aos="fade-up">
                 <center>
                     <h2>KATEGORI</h2>
                     <div><span class="cat-prod">Kategori Produk</span></div>
@@ -359,57 +359,28 @@
 
             <div class="container">
 
-                {{-- <div class="row gy-4">
-
-                    @foreach ($category as $cat)
-                        <div class="col-lg-3 col-md-2" data-aos="fade-up" data-aos-delay="100">
-                            <div class="service-item  position-relative">
-                                <img src="{{ asset('assets/img/category/' . $cat->image) }}" class="img-fluid"
-                                    style="max-width: 30%" alt="">
-                                <a href="{{ route('category-landing') }}?category={{ $cat->id }}" class="stretched-link" style="color: black">
-                                    <p>
-                                        <strong>
-                                            {{ $cat->category }}
-                                        </strong>
-                                    </p>
-                                </a>
-                            </div>
-                        </div><!-- End Service Item -->
-                    @endforeach
-                    <div class="col-lg-3 col-md-2" data-aos="fade-up" data-aos-delay="100">
-                        <div class="service-item  position-relative">
-                            <img src="{{ asset('assets-landing/img/home/LAIN LAIN.png') }}" class="img-fluid"
-                                style="max-width: 30%" alt="">
-                            <a href="{{ route('category-landing') }}?category=all" class="stretched-link" style="color: black">
-                                <p>
-                                    <strong>
-                                        Lain Lain
-                                    </strong>
-                                </p>
-                            </a>
-                        </div>
-                    </div><!-- End Service Item -->
-
-                </div> --}}
-
                 <div class="row gy-4">
                     @foreach ($category as $cat)
                         <div class="col-lg-3 col-md-2 col-3" data-aos="fade-up" data-aos-delay="100">
                             <div class="service-item position-relative">
-                                <img src="{{ asset('assets/img/category/' . $cat->image) }}" class="img-fluid img-cat" style="max-width: 50%" alt="">
-                                <a href="{{ route('category-landing') }}?category={{ $cat->id }}" class="stretched-link" style="color: black">
+                                <img src="{{ asset('assets/img/category/' . $cat['image']) }}" class="img-fluid img-cat"
+                                    style="max-width: 50%" alt="">
+                                <a href="{{ route('category-landing') }}?category={{ $cat['id'] }}"
+                                    class="stretched-link" style="color: black">
                                     <p class="fs-6 fs-md-5 fs-lg-4 text-cat">
-                                        <strong>{{ $cat->category }}</strong>
+                                        <strong>{{ $cat['category'] }}</strong>
                                     </p>
                                 </a>
                             </div>
                         </div><!-- End Service Item -->
                     @endforeach
-                
+
                     <div class="col-lg-3 col-md-2 col-3" data-aos="fade-up" data-aos-delay="100">
                         <div class="service-item position-relative">
-                            <img src="{{ asset('assets-landing/img/home/LAIN LAIN.png') }}" class="img-fluid img-cat" style="max-width: 50%" alt="">
-                            <a href="{{ route('category-landing') }}?category=all" class="stretched-link" style="color: black">
+                            <img src="{{ asset('assets-landing/img/home/LAIN LAIN.png') }}" class="img-fluid img-cat"
+                                style="max-width: 50%" alt="">
+                            <a href="{{ route('category-landing') }}?category=all" class="stretched-link"
+                                style="color: black">
                                 <p class="fs-6 fs-md-5 fs-lg-4 text-cat">
                                     <strong>Lain Lain</strong>
                                 </p>
@@ -417,7 +388,7 @@
                         </div>
                     </div><!-- End Service Item -->
                 </div>
-                
+
 
             </div>
 
@@ -428,7 +399,7 @@
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up" style="color: #F7941D!important">
                 <center>
-                    <div style="color: #F7941D!important"> <span>PRODUCTS</span></div>
+                    <div style="color: #F7941D!important"> <span>PRODUCTS LIST</span></div>
                 </center>
             </div><!-- End Section Title -->
 
@@ -447,7 +418,7 @@
                                     $catProd = App\Models\CategoryDocument::where('id', $p->id_category)->first();
 
                                 @endphp
-                                <div class="col-md-3 col-sm-6">
+                                <div class="col-md-3 col-sm-6 product-item custom-col">
                                     <div class="product-grid">
                                         <div class="product-image">
                                             <a href="{{ route('detail-prod', $p->id) }}" class="image">

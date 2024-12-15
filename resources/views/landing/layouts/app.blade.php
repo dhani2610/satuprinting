@@ -452,37 +452,63 @@
         .whatsapp-chat .text-wa-light-green {
             color: var(--wa-chat-light-green);
         }
-        #scroll-top{
-          display: none!important
+
+        #scroll-top {
+            display: none !important
         }
+
         .hero .carousel-item:before {
-        content: "";
-        background: none!important;
-        position: absolute;
-        inset: 0;
-        z-index: 2;
-      }
+            content: "";
+            background: none !important;
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+        }
 
-      .hero .carousel-item::before {
-        content: "";
-        background-color: none!important;
-        position: absolute;
-        inset: 0;
-      }
+        .hero .carousel-item::before {
+            content: "";
+            background-color: none !important;
+            position: absolute;
+            inset: 0;
+        }
 
-      .footer .social-links a {
-        /* display: flex;
+        .footer .social-links a {
+            /* display: flex;
         align-items: center;
         justify-content: center; */
-        width: 40px;
-        height: 40px;
-        /* border-radius: 50%; */
-        /* border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%); */
-        font-size: 16px;
-        color: color-mix(in srgb, var(--default-color), transparent 30%);
-        margin-right: 10px;
-        transition: 0.3s;
+            width: 40px;
+            height: 40px;
+            /* border-radius: 50%; */
+            /* border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%); */
+            font-size: 16px;
+            color: color-mix(in srgb, var(--default-color), transparent 30%);
+            margin-right: 10px;
+            transition: 0.3s;
         }
+
+        .custom-col {
+            width: 20%;
+            /* Each column takes 20% of the row */
+            float: left;
+            /* Ensure the columns align properly */
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .custom-col {
+                width: 50%;
+                /* 2 items per row on smaller screens */
+            }
+        }
+
+        @media (max-width: 576px) {
+            .custom-col {
+                width: 100%;
+                /* 1 item per row on extra small screens */
+            }
+        }
+
 
 
         /* update css  */
