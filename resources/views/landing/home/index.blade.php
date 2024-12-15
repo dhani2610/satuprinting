@@ -372,6 +372,7 @@
                 display: none;
             }
         }
+        
 
         @media (max-width: 768px) {
             .text-cat {
@@ -384,6 +385,21 @@
 
             .cat-prod {
                 font-size: 18px !important
+            }
+            .img-layanan{
+                max-width: 39px!important;
+            }
+            .text-layanan{
+                font-size: 8px !important;
+            }
+
+            .stats .stats-item {
+                padding: 0px!important;
+                border: none!important;
+                box-shadow: none !important; 
+            }
+            section, .section {
+                padding: 37px 0!important;
             }
         }
 
@@ -474,40 +490,40 @@
 
                 <div class="row gy-4">
 
-                    <div class="col-lg-3 col-md-6 col-sm-3 d-flex flex-column align-items-center">
+                    <div class="col-lg-3 col-md-6 col-3 d-flex flex-column align-items-center">
                         {{-- <i class="bi bi-emoji-smile"></i> --}}
                         <div class="stats-item" style="background: transparent">
-                            <img src="{{ asset('assets-landing/img/home/HASIL.png') }}" class="img-fluid"
+                            <img src="{{ asset('assets-landing/img/home/HASIL.png') }}" class="img-fluid img-layanan"
                                 style="max-width: 30%" alt="">
-                            <p><strong>PRODUK BERKUALITAS</strong></p>
+                            <p class="text-layanan"><strong>PRODUK BERKUALITAS</strong></p>
                         </div>
 
                     </div><!-- End Stats Item -->
 
-                    <div class="col-lg-3 col-md-6 col-sm-3 d-flex flex-column align-items-center">
+                    <div class="col-lg-3 col-md-6 col-3 d-flex flex-column align-items-center">
                         {{-- <i class="bi bi-journal-richtext"></i> --}}
                         <div class="stats-item" style="background: transparent">
-                            <img src="{{ asset('assets-landing/img/home/ONGKIR.png') }}" class="img-fluid"
+                            <img src="{{ asset('assets-landing/img/home/ONGKIR.png') }}" class="img-fluid img-layanan"
                                 style="max-width: 30%" alt="">
-                            <p><strong>FREE ONGKIR</strong></p>
+                            <p class="text-layanan"><strong>FREE ONGKIR</strong></p>
                         </div>
                     </div><!-- End Stats Item -->
 
-                    <div class="col-lg-3 col-md-6 col-sm-3 d-flex flex-column align-items-center">
+                    <div class="col-lg-3 col-md-6 col-3 d-flex flex-column align-items-center">
                         {{-- <i class="bi bi-headset"></i> --}}
                         <div class="stats-item" style="background: transparent">
-                            <img src="{{ asset('assets-landing/img/home/LAYANAN.png') }}" class="img-fluid"
+                            <img src="{{ asset('assets-landing/img/home/LAYANAN.png') }}" class="img-fluid img-layanan"
                                 style="max-width: 30%" alt="">
-                            <p><strong>PELAYANAN PRIMA</strong></p>
+                            <p class="text-layanan"><strong>PELAYANAN PRIMA</strong></p>
                         </div>
                     </div><!-- End Stats Item -->
 
-                    <div class="col-lg-3 col-md-6 col-sm-3 d-flex flex-column align-items-center">
+                    <div class="col-lg-3 col-md-6 col-3 d-flex flex-column align-items-center">
                         {{-- <i class="bi bi-people"></i> --}}
                         <div class="stats-item" style="background: transparent">
-                            <img src="{{ asset('assets-landing/img/home/ONLINE.png') }}" class="img-fluid"
+                            <img src="{{ asset('assets-landing/img/home/ONLINE.png') }}" class="img-fluid img-layanan"
                                 style="max-width: 30%" alt="">
-                            <p><strong>ONLINE SERVICE</strong></p>
+                            <p class="text-layanan"><strong>ONLINE SERVICE</strong></p>
                         </div>
                     </div><!-- End Stats Item -->
 
