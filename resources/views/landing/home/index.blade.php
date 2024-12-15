@@ -398,9 +398,6 @@
                 border: none!important;
                 box-shadow: none !important; 
             }
-            section, .section {
-                padding: 37px 0!important;
-            }
         }
 
         .swiper-button-next,
