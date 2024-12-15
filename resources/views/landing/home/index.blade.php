@@ -404,6 +404,12 @@
             border-radius: 50%;
             font-weight: 900;
         }
+        .hero .carousel-control-next-icon, .hero .carousel-control-prev-icon {
+            background: #F7971E !important;
+            font-size: 32px;
+            line-height: 1;
+            color: white;
+        }
     </style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
     @include('landing.layouts.partials.messages')
@@ -413,7 +419,7 @@
         <!-- Hero Section -->
         <section id="hero" class="hero section dark-background">
 
-            <div id="hero-carousel" class="carousel slide " data-bs-ride="carousel" data-bs-interval="5000">
+            <div id="hero-carousel" class="carousel slide " data-bs-ride="carousel" data-bs-interval="3000">
 
                 @foreach ($slider as $s)
                     <div class="carousel-item {{ $loop->iteration == 1 ? 'active' : '' }}">
@@ -494,7 +500,6 @@
             <!-- Section Title -->
             <div class="container section-title " data-aos="fade-up">
                 <center>
-                    <h2>KATEGORI</h2>
                     <div><span class="cat-prod">Kategori Produk</span></div>
                 </center>
             </div><!-- End Section Title -->

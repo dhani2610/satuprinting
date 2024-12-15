@@ -13,7 +13,7 @@
                     <p> <b>Hubungi kami</b>
                         <br>
                         <br>
-                        Ruko Pesona Jl. Panti Asuhan No. G3A Pondok Aren, Tangerang Selatan 15223
+                        Ruko Pesona Jl. Panti Asuhan No. G3A <br>  Pondok Aren, Tangerang Selatan 15223
                     </p>
 
                     <div class="social-links mt-4">
