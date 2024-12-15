@@ -91,8 +91,8 @@
                                                         <textarea name="content" required class="summernote" id="" cols="30" rows="10"></textarea>
                                                     </div>
                                                     <div class="mb-4">
-                                                        <label class="form-label" for="status">Diskon?</label>
-                                                        <select id="status" name="status" class="form-select">
+                                                        <label class="form-label" for="is_diskon">Diskon?</label>
+                                                        <select id="is_diskon" name="is_diskon" class="form-select">
                                                             <option value="1">Ya</option>
                                                             <option value="0">Tidak</option>
                                                         </select>
