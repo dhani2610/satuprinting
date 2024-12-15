@@ -470,6 +470,21 @@
         inset: 0;
       }
 
+      .footer .social-links a {
+        /* display: flex;
+        align-items: center;
+        justify-content: center; */
+        width: 40px;
+        height: 40px;
+        /* border-radius: 50%; */
+        /* border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%); */
+        font-size: 16px;
+        color: color-mix(in srgb, var(--default-color), transparent 30%);
+        margin-right: 10px;
+        transition: 0.3s;
+        }
+
+
         /* update css  */
     </style>
 
