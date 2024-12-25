@@ -4,7 +4,8 @@
     $setting = \App\Models\Setting::first()
     @endphp
     <title>{{ $setting->nama_website }} | {{ $page_title ?? 'Home' }}</title>
-    <link rel="icon" href="{{ asset('assets/img/logo/' . $setting->logo) }}">
+    {{-- <link rel="icon" href="{{ asset('assets/img/logo/' . $setting->logo) }}"> --}}
+    <link rel="icon" href="{{ asset('assets/img/pavicon-satuprinting.png') }}">
 
     <!-- Meta Description -->
     <meta name="description" content="{{ isset($prod) && $prod->description ? $prod->meta_description : $setting->meta_description }}">
